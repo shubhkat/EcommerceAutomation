@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 84.553 sec <<< FAILURE! - in TestSuite
+testVerifyLogo(com.testScript.TestAppScript)  Time elapsed: 0.309 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Flipkart] but found [Supermart]
+	at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:19)
+
