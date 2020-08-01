@@ -1,4 +1,3 @@
-
 package com.testScript;
  
 import org.testng.annotations.Test;
@@ -30,7 +29,7 @@ import org.testng.annotations.Test;
 	  "this method is used to add a selected product to the basket") public void
 	  testAddToBasket() throws InterruptedException{ 
 		  AppScript appScript = new AppScript(driver); 
-		  appScript.addToBasket(); 
+		  appScript.addToCart(); 
 		  
 	  }
 	  
@@ -43,7 +42,7 @@ import org.testng.annotations.Test;
 	  
 	  @Test(dependsOnMethods = {"testLoginPage", "testProductSelection",
 	  "testAddToBasket", "testComparePrice"}) 
-	  public void detailsoftestcases() {
+	  public void detailsOfTestCases() {
 		  AppScript appScript = new AppScript(driver); 
 		  appScript.detailsOfTestCases(); 
 	  } 

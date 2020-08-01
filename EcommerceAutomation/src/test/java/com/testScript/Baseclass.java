@@ -46,14 +46,14 @@ public class Baseclass {
 			driver=new ChromeDriver();
 		}
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.get("https://www.flipkart.com/");
 	}
 	
 	@BeforeSuite
 	public void setReport()
 	{
-		String reportpath = "../EcommerceAutomation/extentReport/report.html";
+		String reportpath = "../ECommerceAutomation/extentReport/report.html";
 		htmlreport = new ExtentHtmlReporter(reportpath);
 		htmlreport.config().setDocumentTitle("Ecommerce Automation testing report");
 		htmlreport.config().setReportName("Automation testing");
@@ -67,8 +67,9 @@ public class Baseclass {
 	}
 	
 	@AfterClass
-	public void postCondition()
+	public void postCondition() throws InterruptedException
 	{
+		Thread.sleep(5000);
 		driver.quit();
 	}
 	

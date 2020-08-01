@@ -2,8 +2,6 @@ package com.testScript;
 
 import java.util.Iterator;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -56,45 +54,35 @@ public class AppScript {
 	private WebElement searchButton;
 	
 	//title of the product
-	@FindBy(xpath="//a[@title='Dettol Original Liquid Hand Wash Refill Hand Wash Bottle']")
+	@FindBy(xpath="//a[contains(@title,'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]")
 	private WebElement productTitle;
 	
 	//product link
-	@FindBy(xpath="(//div/div/div[3]/div[2]/div/div[2]/div/div/div[1])[2]")
-	private WebElement productLink;
+	//@FindBy(xpath="(//div/div/div[3]/div[2]/div/div[2]/div/div/div[1])[2]")
+	//private WebElement productLink;
 	
 	//price of product in product link page
-	@FindBy(xpath="(//div/div[1]/a/div/div[1])[5]")
+	@FindBy(xpath="//a[contains(@title,'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/..//a[3]/div/div")
 	private WebElement productPriceSearchPage;
 	
-	@FindBy(xpath="(//div[2]/div[1]/div/div[1])[4]")
+	@FindBy(xpath="//div/div[2]/div[2]/div/div//span[contains(text(),'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/../../..//div[2]/div[1]")
 	private WebElement productPriceProductPage;
 	
 	//scroll element
 	@FindBy(xpath = "//div[contains(text(),'Safe and Secure Payments.')]")
-	private WebElement scrollElement;
+	private WebElement scrollElementByOtherElement;
+	
+	//@FindBy(xpath = "//a[contains(text(),'All questions')]")
+	//private WebElement scrollElement;
 	
 	//add to basket
-	@FindBy(xpath="//button[contains(text(),'ADD TO BASKET')]")
-	private WebElement addToBasketButton;
+	@FindBy(xpath="(//button)[2]")
+	private WebElement addToCartButton;
 	
-	//go to basket btn
+	//go to basket button
 	@FindBy(xpath="//button[contains(text(),'GO TO BASKET')]")
 	private WebElement goToBasketButton;
-	
-	//product price on go to basket page
-	@FindBy(xpath="(//div[1]/div[2]/div[1]/div/div/span[1])[1]")
-	private WebElement productPriceBasketPage;
-	
-	@FindBy(xpath="//div[1]/div[2]/div[1]/div/div/div/div/div[1]/span")
-	private WebElement productPriceBasketDetailPage;
-	
-	@FindBy(xpath="(//div[1]/div[2]/div[1]/div/div/div/div/div[2]/span)[1]")
-	private WebElement deliveryFee;
-	
-	@FindBy(xpath="//div[1]/div[2]/div[1]/div/div/div/div/div[3]/div/span")
-	private WebElement totalFee;
-	
+
 	public AppScript(WebDriver driver) {
 		this.driver = driver;
 		//This initElements method will create all WebElements
@@ -103,19 +91,18 @@ public class AppScript {
 	
 	public void loginPage() {
 		
-		  //excel Path 
-		  String filePath = "../EcommerceAutomation/test_Data/testData.xlsx";
+	   //excel Path 
+	   String filePath = "../EcommerceAutomation/test_Data/testData.xlsx";
 	  
-		  //sheet Name 
-		  String sheetName = "Login Details"; 
-		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	   //sheet Name 
+		String sheetName = "Login Details"; 
+		
 		//identify cross button element
 		loginPopupCancelBtn.click();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		//Identify login button element
 		loginLink.click();
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//Identify username element 
 		String userName = Excel.ReadExcel(filePath, sheetName, 1, 0); 
 		String passWord = Excel.ReadExcel(filePath, sheetName, 1, 1);
@@ -124,7 +111,6 @@ public class AppScript {
 		//finding passwaord element
 		password.sendKeys(passWord);
 		
-		//WebElement loginbtn = driver.findElement(By.xpath("(//span[text()='Login'])[2]"));
 		loginbtn.click();
 
 	}
@@ -132,12 +118,17 @@ public class AppScript {
 	public void verifyLogo() {
 		String titleAttribute = applogo.getAttribute("title");
 		Assert.assertEquals("Supermart", titleAttribute);
+		/*
+		 * try { Assert.assertEquals("Supermart", titleAttribute);
+		 * Reporter.log("application logo is match!",true); } catch(AssertionError e) {
+		 * Reporter.log("application logo is not match!",true); }
+		 */
 	}
 	
 	public void productSelection() {
 		
 	    //excel Path 
-	    String filePath = "../EcommerceAutomation/test_Data/testData.xlsx";
+	    String filePath = "../ECommerceAutomation/test_Data/testData.xlsx";
 		  
 	    //product select sheets 
 	    String productselectionSheetName = "Product Selection"; 
@@ -153,8 +144,8 @@ public class AppScript {
 		Reporter.log("Product price: "+searchPagePrice, true);
 		productPrice_searchPage = Integer.parseInt(searchPagePrice);
 		
-		productLink.click();
-
+		productTitle.click();
+		
 		//window focus change to other window
 		Set<String> s = driver.getWindowHandles();
 		Iterator<String> itr = s.iterator();
@@ -162,66 +153,34 @@ public class AppScript {
 			String ref_id = itr.next();
 			driver.switchTo().window(ref_id);
 		}
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		
 		String price_productPage = productPriceProductPage.getText();
 		
 		String productPagePrice = price_productPage.substring(1, price_productPage.length());
 		
 		productPrice_productDetailPage = Integer.parseInt(productPagePrice);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		
+				
 	}
 	
-	public void addToBasket() {
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	public void addToCart() {
+		
 		//scroll into view
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", scrollElement);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		addToBasketButton.click();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", scrollElementByOtherElement);
+		
+		addToCartButton.click();
 		goToBasketButton.click();
+		
 	}
 	
 	public void comparePrice() {
-		
-		String price_basketPage = productPriceBasketPage.getText();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		String basketPagePrice = price_basketPage.substring(1, price_basketPage.length());
-		
-		productPrice_basketPage = Integer.parseInt(basketPagePrice);
-
-		String price_basketDetailPage = productPriceBasketDetailPage.getText();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		String basketDetailPagePrice = price_basketDetailPage.substring(1, price_basketDetailPage.length());
-		
-		productPrice_basketDetailPage = Integer.parseInt(basketDetailPagePrice);
-		
-		String deliveryAmount = deliveryFee.getText();
-		String deliveryPrice = deliveryAmount.substring(1, deliveryAmount.length());
-		Reporter.log("Delivery Charges: "+deliveryPrice, true);
-				
-		int productDeliveryPrice = Integer.parseInt(deliveryPrice);
-
-		String totalAmount = totalFee.getText();
-		String totalPrice = totalAmount.substring(1, totalAmount.length());
-		Reporter.log("Delivery Charges + Product price = "+totalPrice, true);
-				
-		int productTotalPrice = Integer.parseInt(totalPrice);
-		
+								
 		if(productPrice_searchPage == productPrice_productDetailPage && productPrice_searchPage == productPrice_basketPage && productPrice_searchPage == productPrice_basketDetailPage) {
 			Reporter.log("All price are same", true);
-			totalPrice_basketDetails = productPrice_basketDetailPage + productDeliveryPrice;
 		}
 		else {
 			Reporter.log("All price are different", true);
 		}
-		
-		if(productTotalPrice == totalPrice_basketDetails) {
-			Reporter.log("Total price for the product is equal to total amount to be paid", true);
-		}
-		else {
-			Reporter.log("Total price for the product is not equal to total amount to be paid", true);
-		}
+					
 	}	
 	
 	
@@ -241,6 +200,4 @@ public class AppScript {
 		  System.out.println();
 		  
 	  }
-	 
-	
 }

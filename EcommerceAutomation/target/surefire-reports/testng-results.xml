@@ -5,63 +5,54 @@
       <![CDATA[Able to capture Screenshot]]>
     </line>
     <line>
-      <![CDATA[Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Bottl...]]>
+      <![CDATA[Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Pouch]]>
     </line>
     <line>
-      <![CDATA[Product price: 149]]>
+      <![CDATA[Product price: 109]]>
     </line>
     <line>
-      <![CDATA[Delivery Charges: 50]]>
-    </line>
-    <line>
-      <![CDATA[Delivery Charges + Product price = 199]]>
-    </line>
-    <line>
-      <![CDATA[All price are different]]>
-    </line>
-    <line>
-      <![CDATA[Total price for the product is not equal to total amount to be paid]]>
+      <![CDATA[All price are same]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-06-26T15:18:26 IST" name="Suite" finished-at="2020-06-26T15:19:49 IST" duration-ms="82327">
+  <suite started-at="2020-08-01T19:26:46 IST" name="Suite" finished-at="2020-08-01T19:27:38 IST" duration-ms="52805">
     <groups>
       <group name="testMethods">
-        <method signature="TestAppScript.testLoginPage()[pri:0, instance:com.testScript.TestAppScript@51399530]" name="testLoginPage" class="com.testScript.TestAppScript"/>
+        <method signature="TestAppScript.testLoginPage()[pri:0, instance:com.testScript.TestAppScript@74235045]" name="testLoginPage" class="com.testScript.TestAppScript"/>
       </group> <!-- testMethods -->
     </groups>
-    <test started-at="2020-06-26T15:18:26 IST" name="Test" finished-at="2020-06-26T15:19:49 IST" duration-ms="82327">
+    <test started-at="2020-08-01T19:26:46 IST" name="Test" finished-at="2020-08-01T19:27:38 IST" duration-ms="52805">
       <class name="com.testScript.TestAppScript">
-        <test-method is-config="true" signature="setReport()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:18:26 IST" name="setReport" finished-at="2020-06-26T15:18:26 IST" duration-ms="402" status="PASS">
+        <test-method is-config="true" signature="setReport()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:26:45 IST" name="setReport" finished-at="2020-08-01T19:26:46 IST" duration-ms="348" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setReport -->
-        <test-method is-config="true" signature="preCondition(java.lang.String)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:18:26 IST" name="preCondition" finished-at="2020-06-26T15:19:14 IST" duration-ms="47624" status="PASS">
+        <test-method is-config="true" signature="preCondition(java.lang.String)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:26:46 IST" name="preCondition" finished-at="2020-08-01T19:27:10 IST" duration-ms="24154" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="testLoginPage()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:14 IST" name="testLoginPage" description="this method is used to login in an application" finished-at="2020-06-26T15:19:21 IST" duration-ms="6890" status="PASS">
+        <test-method signature="testLoginPage()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:10 IST" name="testLoginPage" description="this method is used to login in an application" finished-at="2020-08-01T19:27:17 IST" duration-ms="6690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginPage -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:21 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:22 IST" duration-ms="1421" status="PASS">
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:17 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:18 IST" duration-ms="1779" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginPage status=SUCCESS method=TestAppScript.testLoginPage()[pri:0, instance:com.testScript.TestAppScript@51399530] output={null}]]]>
+                <![CDATA[[TestResult name=testLoginPage status=SUCCESS method=TestAppScript.testLoginPage()[pri:0, instance:com.testScript.TestAppScript@74235045] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
-        <test-method signature="testVerifyLogo()[pri:1, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:22 IST" name="testVerifyLogo" description="this method is used to verify logo of application" depends-on-groups="testMethods" finished-at="2020-06-26T15:19:23 IST" duration-ms="251" status="FAIL">
+        <test-method signature="testVerifyLogo()[pri:1, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:18 IST" name="testVerifyLogo" description="this method is used to verify logo of application" depends-on-groups="testMethods" finished-at="2020-08-01T19:27:20 IST" duration-ms="1582" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Flipkart] but found [Supermart]]]>
@@ -73,8 +64,8 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
 at org.testng.Assert.assertEquals(Assert.java:585)
-at com.testScript.AppScript.verifyLogo(AppScript.java:134)
-at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:19)
+at com.testScript.AppScript.verifyLogo(AppScript.java:120)
+at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:18)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,11 +103,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testVerifyLogo -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:23 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:24 IST" duration-ms="958" status="PASS">
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:21 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:23 IST" duration-ms="2020" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testVerifyLogo status=FAILURE method=TestAppScript.testVerifyLogo()[pri:1, instance:com.testScript.TestAppScript@51399530] output={null}]]]>
+                <![CDATA[[TestResult name=testVerifyLogo status=FAILURE method=TestAppScript.testVerifyLogo()[pri:1, instance:com.testScript.TestAppScript@74235045] output={null}]]]>
               </value>
             </param>
           </params>
@@ -126,85 +117,76 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
             </line>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
-        <test-method signature="testProductSelection()[pri:2, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:24 IST" name="testProductSelection" description="this method is used to select product from product page" depends-on-groups="testMethods" finished-at="2020-06-26T15:19:30 IST" duration-ms="6699" status="PASS">
+        <test-method signature="testProductSelection()[pri:2, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:23 IST" name="testProductSelection" description="this method is used to select product from product page" depends-on-groups="testMethods" finished-at="2020-08-01T19:27:29 IST" duration-ms="6419" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Bottl...]]>
+              <![CDATA[Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Pouch]]>
             </line>
             <line>
-              <![CDATA[Product price: 149]]>
+              <![CDATA[Product price: 109]]>
             </line>
           </reporter-output>
         </test-method> <!-- testProductSelection -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:30 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:31 IST" duration-ms="145" status="PASS">
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:29 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:29 IST" duration-ms="151" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testProductSelection status=SUCCESS method=TestAppScript.testProductSelection()[pri:2, instance:com.testScript.TestAppScript@51399530] output=Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Bottl...]]]>
+                <![CDATA[[TestResult name=testProductSelection status=SUCCESS method=TestAppScript.testProductSelection()[pri:2, instance:com.testScript.TestAppScript@74235045] output=Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Pouch]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
-        <test-method signature="testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:31 IST" name="testAddToBasket" description="this method is used to add a selected product to the basket" finished-at="2020-06-26T15:19:35 IST" depends-on-methods="com.testScript.TestAppScript.testProductSelection" duration-ms="4829" status="PASS">
+        <test-method signature="testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:29 IST" name="testAddToBasket" description="this method is used to add a selected product to the basket" finished-at="2020-08-01T19:27:31 IST" depends-on-methods="com.testScript.TestAppScript.testProductSelection" duration-ms="1466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddToBasket -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:35 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:36 IST" duration-ms="155" status="PASS">
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:31 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:31 IST" duration-ms="239" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testAddToBasket status=SUCCESS method=TestAppScript.testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@51399530] output={null}]]]>
+                <![CDATA[[TestResult name=testAddToBasket status=SUCCESS method=TestAppScript.testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@74235045] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
-        <test-method signature="testComparePrice()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:36 IST" name="testComparePrice" description="this method is used to compare the price whether it is same or not" finished-at="2020-06-26T15:19:36 IST" depends-on-methods="com.testScript.TestAppScript.testAddToBasket" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:31 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:31 IST" duration-ms="479" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testComparePrice status=SUCCESS method=TestAppScript.testComparePrice()[pri:0, instance:com.testScript.TestAppScript@74235045] output=All price are same]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testComparePrice()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:31 IST" name="testComparePrice" description="this method is used to compare the price whether it is same or not" finished-at="2020-08-01T19:27:31 IST" depends-on-methods="com.testScript.TestAppScript.testAddToBasket" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Delivery Charges: 50]]>
-            </line>
-            <line>
-              <![CDATA[Delivery Charges + Product price = 199]]>
-            </line>
-            <line>
-              <![CDATA[All price are different]]>
-            </line>
-            <line>
-              <![CDATA[Total price for the product is not equal to total amount to be paid]]>
+              <![CDATA[All price are same]]>
             </line>
           </reporter-output>
         </test-method> <!-- testComparePrice -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:36 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:36 IST" duration-ms="119" status="PASS">
+        <test-method signature="detailsOfTestCases()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:31 IST" name="detailsOfTestCases" finished-at="2020-08-01T19:27:31 IST" depends-on-methods="com.testScript.TestAppScript.testComparePrice, com.testScript.TestAppScript.testAddToBasket, com.testScript.TestAppScript.testLoginPage, com.testScript.TestAppScript.testProductSelection" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- detailsOfTestCases -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:31 IST" name="captureScreenshot" finished-at="2020-08-01T19:27:32 IST" duration-ms="212" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testComparePrice status=SUCCESS method=TestAppScript.testComparePrice()[pri:0, instance:com.testScript.TestAppScript@51399530] output=Delivery Charges: 50]]]>
+                <![CDATA[[TestResult name=detailsOfTestCases status=SUCCESS method=TestAppScript.detailsOfTestCases()[pri:0, instance:com.testScript.TestAppScript@74235045] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureScreenshot -->
-        <test-method signature="detailsoftestcases()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:36 IST" name="detailsoftestcases" finished-at="2020-06-26T15:19:36 IST" depends-on-methods="com.testScript.TestAppScript.testComparePrice, com.testScript.TestAppScript.testAddToBasket, com.testScript.TestAppScript.testLoginPage, com.testScript.TestAppScript.testProductSelection" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- detailsoftestcases -->
-        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:36 IST" name="captureScreenshot" finished-at="2020-06-26T15:19:36 IST" duration-ms="128" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=detailsoftestcases status=SUCCESS method=TestAppScript.detailsoftestcases()[pri:0, instance:com.testScript.TestAppScript@51399530] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureScreenshot -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:com.testScript.TestAppScript@51399530]" started-at="2020-06-26T15:19:36 IST" name="postCondition" finished-at="2020-06-26T15:19:49 IST" duration-ms="12735" status="PASS">
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:com.testScript.TestAppScript@74235045]" started-at="2020-08-01T19:27:32 IST" name="postCondition" finished-at="2020-08-01T19:27:38 IST" duration-ms="6855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->

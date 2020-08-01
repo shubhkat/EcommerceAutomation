@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,  3 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,39 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testProductSelection">testProductSelection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testVerifyLogo">testVerifyLogo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="detailsoftestcases">detailsoftestcases</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testAddToBasket">testAddToBasket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testComparePrice">testComparePrice</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,27 +145,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="detailsoftestcases">detailsoftestcases</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testAddToBasket">testAddToBasket</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testComparePrice">testComparePrice</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testLoginPage">testLoginPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.testScript.TestAppScript" class="method navigator-link" hash-for-method="testProductSelection">testProductSelection</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -159,12 +168,47 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="testProductSelection">
+                  </a> <!-- testProductSelection -->
+                  <span class="method-name">testProductSelection</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@title=&apos;Dettol Original Liquid Hand Wash Refill Hand Wash Bottle&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-DELL&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.6&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200708170202, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 4968, moz:profile: C:\Users\shubh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 08121760-92f0-4dc8-bbd1-e211eb6e4248
+*** Element info: {Using=xpath, value=//a[@title=&apos;Dettol Original Liquid Hand Wash Refill Hand Wash Bottle&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
+	at com.testScript.AppScript.productSelection(AppScript.java:152)
+	at com.testScript.TestAppScript.testProductSelection(TestAppScript.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(this method is used to select product from product page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testVerifyLogo">
                   </a> <!-- testVerifyLogo -->
                   <span class="method-name">testVerifyLogo</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [Flipkart] but found [Supermart]
-	at com.testScript.AppScript.verifyLogo(AppScript.java:134)
-	at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:19)
+	at com.testScript.AppScript.verifyLogo(AppScript.java:137)
+	at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:54)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -174,9 +218,9 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.testScript.TestAppScript</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -185,6 +229,10 @@
                   <a name="detailsoftestcases">
                   </a> <!-- detailsoftestcases -->
                   <span class="method-name">detailsoftestcases</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestAppScript.detailsoftestcases()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -192,6 +240,10 @@
                   <a name="testAddToBasket">
                   </a> <!-- testAddToBasket -->
                   <span class="method-name">testAddToBasket</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestAppScript.testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (this method is used to add a selected product to the basket)                  </em>
                 </div> <!-- method-content -->
@@ -201,10 +253,22 @@
                   <a name="testComparePrice">
                   </a> <!-- testComparePrice -->
                   <span class="method-name">testComparePrice</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestAppScript.testComparePrice()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (this method is used to compare the price whether it is same or not)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testScript.TestAppScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="testLoginPage">
@@ -212,15 +276,6 @@
                   <span class="method-name">testLoginPage</span>
                   <em>
 (this method is used to login in an application)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testProductSelection">
-                  </a> <!-- testProductSelection -->
-                  <span class="method-name">testProductSelection</span>
-                  <em>
-(this method is used to select product from product page)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -290,32 +345,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testProductSelection')
 data.setCell(0, 2, 'com.testScript.TestAppScript')
-data.setCell(0, 3, 5508);
+data.setCell(0, 3, 31132);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testLoginPage')
 data.setCell(1, 2, 'com.testScript.TestAppScript')
-data.setCell(1, 3, 5345);
+data.setCell(1, 3, 14209);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAddToBasket')
+data.setCell(2, 1, 'testVerifyLogo')
 data.setCell(2, 2, 'com.testScript.TestAppScript')
-data.setCell(2, 3, 2039);
+data.setCell(2, 3, 1320);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testComparePrice')
+data.setCell(3, 1, 'testAddToBasket')
 data.setCell(3, 2, 'com.testScript.TestAppScript')
-data.setCell(3, 3, 295);
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testVerifyLogo')
+data.setCell(4, 1, 'detailsoftestcases')
 data.setCell(4, 2, 'com.testScript.TestAppScript')
-data.setCell(4, 3, 175);
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'detailsoftestcases')
+data.setCell(5, 1, 'testComparePrice')
 data.setCell(5, 2, 'com.testScript.TestAppScript')
-data.setCell(5, 3, 9);
+data.setCell(5, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -326,22 +381,6 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testComparePrice</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Delivery Charges: 50</span>
-                <span class="reporter-method-output">Delivery Charges + Product price = 199</span>
-                <span class="reporter-method-output">All price are different</span>
-                <span class="reporter-method-output">Total price for the product is not equal to total amount to be paid</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testProductSelection</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Bottl...</span>
-                <span class="reporter-method-output">Product price: 149</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -359,66 +398,56 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.testScript.TestAppScript</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">setReport</span>
+                <span class="method-name">testSetReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">preCondition(firefox)</span>
-                <span class="method-start">748 ms</span>
+                <span class="method-name">testPreCondintion(firefox)</span>
+                <span class="method-start">499 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testLoginPage</span>
-                <span class="method-start">14115 ms</span>
+                <span class="method-start">48918 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=testLoginPage status=SUCCESS method=TestAppScript.testLoginPage()[pri:0, instance:c...)</span>
-                <span class="method-start">19467 ms</span>
+                <span class="method-name">testCaptureScreenshot([TestResult name=testLoginPage status=SUCCESS method=TestAppScript.testLoginPage()[pri:0, instance:c...)</span>
+                <span class="method-start">63136 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testVerifyLogo</span>
-                <span class="method-start">20330 ms</span>
+                <span class="method-start">64520 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=testVerifyLogo status=FAILURE method=TestAppScript.testVerifyLogo()[pri:1, instance...)</span>
-                <span class="method-start">20514 ms</span>
+                <span class="method-name">testCaptureScreenshot([TestResult name=testVerifyLogo status=FAILURE method=TestAppScript.testVerifyLogo()[pri:1, instance...)</span>
+                <span class="method-start">65855 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testProductSelection</span>
-                <span class="method-start">21115 ms</span>
+                <span class="method-start">67673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=testProductSelection status=SUCCESS method=TestAppScript.testProductSelection()[pri...)</span>
-                <span class="method-start">26626 ms</span>
+                <span class="method-name">testCaptureScreenshot([TestResult name=testProductSelection status=FAILURE method=TestAppScript.testProductSelection()[pri...)</span>
+                <span class="method-start">98809 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testAddToBasket</span>
-                <span class="method-start">26814 ms</span>
+                <span class="method-start">99298 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=testAddToBasket status=SUCCESS method=TestAppScript.testAddToBasket()[pri:0, instan...)</span>
-                <span class="method-start">28856 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testComparePrice</span>
-                <span class="method-start">28999 ms</span>
+                <span class="method-start">99307 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=testComparePrice status=SUCCESS method=TestAppScript.testComparePrice()[pri:0, inst...)</span>
-                <span class="method-start">29296 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">detailsoftestcases</span>
-                <span class="method-start">29422 ms</span>
+                <span class="method-start">99313 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">captureScreenshot([TestResult name=detailsoftestcases status=SUCCESS method=TestAppScript.detailsoftestcases()[pri:0, ...)</span>
-                <span class="method-start">29438 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
-                <span class="method-name">postCondition</span>
-                <span class="method-start">29560 ms</span>
+                <span class="method-name">testPreCondition</span>
+                <span class="method-start">99319 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

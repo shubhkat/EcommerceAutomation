@@ -6,11 +6,15 @@
     <classes>
       <class name="com.testScript.TestAppScript">
         <methods>
-          <include name="captureScreenshot"/>
-          <include name="preCondition"/>
-          <include name="setReport"/>
+          <include name="testCaptureScreenshot"/>
+          <include name="testAddToBasket"/>
+          <include name="testSetReport"/>
+          <include name="detailsoftestcases"/>
+          <include name="testComparePrice"/>
+          <include name="testPreCondition"/>
+          <include name="testPreCondintion"/>
           <include name="testVerifyLogo"/>
-          <include name="postCondition"/>
+          <include name="testProductSelection"/>
           <include name="testLoginPage"/>
         </methods>
       </class> <!-- com.testScript.TestAppScript -->

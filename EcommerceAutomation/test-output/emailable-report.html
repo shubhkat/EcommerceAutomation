@@ -9,19 +9,49 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">34,642</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num attn">3</td><td class="num">0</td><td class="num attn">2</td><td class="num">104,690</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.testScript.TestAppScript</td><td><a href="#m0">testVerifyLogo</a></td><td rowspan="1">1593162094417</td><td rowspan="1">175</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.testScript.TestAppScript</td><td><a href="#m1">detailsoftestcases</a></td><td rowspan="1">1593162103509</td><td rowspan="1">9</td></tr><tr class="passedeven"><td><a href="#m2">testAddToBasket</a></td><td rowspan="1">1593162100901</td><td rowspan="1">2039</td></tr><tr class="passedeven"><td><a href="#m3">testComparePrice</a></td><td rowspan="1">1593162103086</td><td rowspan="1">295</td></tr><tr class="passedeven"><td><a href="#m4">testLoginPage</a></td><td rowspan="1">1593162088202</td><td rowspan="1">5345</td></tr><tr class="passedeven"><td><a href="#m5">testProductSelection</a></td><td rowspan="1">1593162095202</td><td rowspan="1">5508</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.testScript.TestAppScript</td><td><a href="#m0">testProductSelection</a></td><td rowspan="1">1596017267949</td><td rowspan="1">31132</td></tr><tr class="failedeven"><td><a href="#m1">testVerifyLogo</a></td><td rowspan="1">1596017264796</td><td rowspan="1">1320</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.testScript.TestAppScript</td><td><a href="#m2">detailsoftestcases</a></td><td rowspan="1">1596017299589</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">testAddToBasket</a></td><td rowspan="1">1596017299574</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">testComparePrice</a></td><td rowspan="1">1596017299583</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.testScript.TestAppScript</td><td><a href="#m5">testLoginPage</a></td><td rowspan="1">1596017249194</td><td rowspan="1">14209</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.testScript.TestAppScript#testVerifyLogo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Flipkart] but found [Supermart]
-	at com.testScript.AppScript.verifyLogo(AppScript.java:134)
-	at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:19)
+<h2>Test</h2><h3 id="m0">com.testScript.TestAppScript#testProductSelection</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[@title=&apos;Dettol Original Liquid Hand Wash Refill Hand Wash Bottle&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-DELL&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.6&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 78.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200708170202, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 4968, moz:profile: C:\Users\shubh\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 08121760-92f0-4dc8-bbd1-e211eb6e4248
+*** Element info: {Using=xpath, value=//a[@title=&apos;Dettol Original Liquid Hand Wash Refill Hand Wash Bottle&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
+	at com.testScript.AppScript.productSelection(AppScript.java:152)
+	at com.testScript.TestAppScript.testProductSelection(TestAppScript.java:61)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.testScript.TestAppScript#testVerifyLogo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Flipkart] but found [Supermart]
+	at com.testScript.AppScript.verifyLogo(AppScript.java:137)
+	at com.testScript.TestAppScript.testVerifyLogo(TestAppScript.java:54)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testScript.TestAppScript#detailsoftestcases</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.testScript.TestAppScript#testAddToBasket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.testScript.TestAppScript#testComparePrice</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Delivery Charges: 50<br/>Delivery Charges + Product price = 199<br/>All price are different<br/>Total price for the product is not equal to total amount to be paid</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.testScript.TestAppScript#testLoginPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.testScript.TestAppScript#testProductSelection</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Product Title: Dettol Original Liquid Hand Wash Refill Hand Wash Bottl...<br/>Product price: 149</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.testScript.TestAppScript#detailsoftestcases</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestAppScript.detailsoftestcases()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.testScript.TestAppScript#testAddToBasket</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestAppScript.testAddToBasket()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.testScript.TestAppScript#testComparePrice</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestAppScript.testComparePrice()[pri:0, instance:com.testScript.TestAppScript@46fa7c39] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.testScript.TestAppScript#testLoginPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
