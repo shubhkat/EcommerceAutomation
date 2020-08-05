@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import com.aventstack.extentreports.ExtentReports;
@@ -22,6 +24,8 @@ public class AppScript {
 	public static ExtentTest test;
 	
 	protected WebDriver driver;
+	
+	WebDriverWait wait;
 	
 	int productPrice_searchPage;	// Declaration of price displayed in search results page
 	int productPrice_productDetailPage;	// Declaration of price after clicking the product link
@@ -65,7 +69,7 @@ public class AppScript {
 	@FindBy(xpath="//a[contains(@title,'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/..//a[3]/div/div")
 	private WebElement productPriceSearchPage;
 	
-	@FindBy(xpath="//div/div[2]/div[2]/div/div//span[contains(text(),'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/../../..//div[2]/div[1]")
+	@FindBy(xpath="//div/div//span[contains(text(),'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/../../..//div[2]/div[1]")
 	private WebElement productPriceProductPage;
 	
 	//scroll element
@@ -86,6 +90,7 @@ public class AppScript {
 	public AppScript(WebDriver driver) {
 		this.driver = driver;
 		//This initElements method will create all WebElements
+		wait = new WebDriverWait(driver,30);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -95,27 +100,33 @@ public class AppScript {
 	   String filePath = "../EcommerceAutomation/test_Data/testData.xlsx";
 	  
 	   //sheet Name 
-		String sheetName = "Login Details"; 
+	   String sheetName = "Login Details"; 
 		
 		//identify cross button element
+		wait.until(ExpectedConditions.visibilityOf(loginPopupCancelBtn));
 		loginPopupCancelBtn.click();
 		
 		//Identify login button element
+		wait.until(ExpectedConditions.visibilityOf(loginLink));
 		loginLink.click();
 	
 		//Identify username element 
 		String userName = Excel.ReadExcel(filePath, sheetName, 1, 0); 
 		String passWord = Excel.ReadExcel(filePath, sheetName, 1, 1);
+		wait.until(ExpectedConditions.visibilityOf(username));
 		username.sendKeys(userName);
 		
 		//finding passwaord element
+		wait.until(ExpectedConditions.visibilityOf(password));
 		password.sendKeys(passWord);
 		
+		wait.until(ExpectedConditions.visibilityOf(loginbtn));
 		loginbtn.click();
 
 	}
 	
 	public void verifyLogo() {
+		wait.until(ExpectedConditions.visibilityOf(applogo));
 		String titleAttribute = applogo.getAttribute("title");
 		Assert.assertEquals("Supermart", titleAttribute);
 		/*
@@ -134,16 +145,20 @@ public class AppScript {
 	    String productselectionSheetName = "Product Selection"; 
 
 	    String searchText = Excel.ReadExcel(filePath, productselectionSheetName, 1, 0);
-		  
+		
+	    wait.until(ExpectedConditions.visibilityOf(searchButton));
 		searchButton.sendKeys(searchText, Keys.ENTER);
 		
+		wait.until(ExpectedConditions.visibilityOf(productTitle));
 		Reporter.log("Product Title: "+productTitle.getText(), true);
 		
+		wait.until(ExpectedConditions.visibilityOf(productPriceSearchPage));
 		String price_searchPage = productPriceSearchPage.getText();
 		String searchPagePrice = price_searchPage.substring(1, price_searchPage.length());
 		Reporter.log("Product price: "+searchPagePrice, true);
 		productPrice_searchPage = Integer.parseInt(searchPagePrice);
 		
+		wait.until(ExpectedConditions.visibilityOf(productTitle));
 		productTitle.click();
 		
 		//window focus change to other window
@@ -154,6 +169,7 @@ public class AppScript {
 			driver.switchTo().window(ref_id);
 		}
 		
+		wait.until(ExpectedConditions.visibilityOf(productPriceProductPage));
 		String price_productPage = productPriceProductPage.getText();
 		
 		String productPagePrice = price_productPage.substring(1, price_productPage.length());
@@ -165,9 +181,12 @@ public class AppScript {
 	public void addToCart() {
 		
 		//scroll into view
+		wait.until(ExpectedConditions.visibilityOf(scrollElementByOtherElement));
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", scrollElementByOtherElement);
 		
+		wait.until(ExpectedConditions.visibilityOf(addToCartButton));
 		addToCartButton.click();
+		wait.until(ExpectedConditions.visibilityOf(goToBasketButton));
 		goToBasketButton.click();
 		
 	}
