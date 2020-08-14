@@ -58,7 +58,7 @@ public class AppScript {
 	private WebElement searchButton;
 	
 	//title of the product
-	@FindBy(xpath="//a[contains(@title,'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]")
+	@FindBy(xpath="(//img[contains(@id,'supermart')]/../..//a[@class=\"_2cLu-l\"])[1]")
 	private WebElement productTitle;
 	
 	//product link
@@ -66,10 +66,10 @@ public class AppScript {
 	//private WebElement productLink;
 	
 	//price of product in product link page
-	@FindBy(xpath="//a[contains(@title,'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/..//a[3]/div/div")
+	@FindBy(xpath="(//img[contains(@id,'supermart')]/../..//a[@class=\"_2cLu-l\"])[1]/..//div[@class='_1vC4OE']")
 	private WebElement productPriceSearchPage;
 	
-	@FindBy(xpath="//div/div//span[contains(text(),'Dettol Original Liquid Hand Wash Refill Hand Wash Pouch')]/../../..//div[2]/div[1]")
+	@FindBy(xpath="//div[@class='_1vC4OE _3qQ9m1']")
 	private WebElement productPriceProductPage;
 	
 	//scroll element
@@ -90,7 +90,7 @@ public class AppScript {
 	public AppScript(WebDriver driver) {
 		this.driver = driver;
 		//This initElements method will create all WebElements
-		wait = new WebDriverWait(driver,30);
+		wait = new WebDriverWait(driver,60);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -139,10 +139,10 @@ public class AppScript {
 	public void productSelection() {
 		
 	    //excel Path 
-	    String filePath = "../ECommerceAutomation/test_Data/testData.xlsx";
+	    String filePath = "../EcommerceAutomation/test_Data/testData.xlsx";
 		  
 	    //product select sheets 
-	    String productselectionSheetName = "Product Selection"; 
+	    String productselectionSheetName = "Product Details"; 
 
 	    String searchText = Excel.ReadExcel(filePath, productselectionSheetName, 1, 0);
 		
@@ -150,7 +150,9 @@ public class AppScript {
 		searchButton.sendKeys(searchText, Keys.ENTER);
 		
 		wait.until(ExpectedConditions.visibilityOf(productTitle));
-		Reporter.log("Product Title: "+productTitle.getText(), true);
+		Reporter.log("Product Title: "+productTitle.getAttribute("title"), true);
+		
+		
 		
 		wait.until(ExpectedConditions.visibilityOf(productPriceSearchPage));
 		String price_searchPage = productPriceSearchPage.getText();
